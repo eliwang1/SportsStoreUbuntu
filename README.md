@@ -2,6 +2,7 @@
 
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
+sudo snap install dotnet-sdk --classic
 
 dotnet new globaljson --sdk-version 6.0.100 --output FirstProje
 dotnet new mvc --no-https --output FirstProject --framework net6.0
