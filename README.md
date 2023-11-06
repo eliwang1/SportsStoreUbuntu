@@ -4,6 +4,13 @@ export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 sudo snap install dotnet-sdk --classic
 
+DOTNET_FILE=dotnet-sdk-7.0.403-linux-musl-arm64.tar.gz
+export DOTNET_ROOT=$(pwd)/.dotnet
+
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
+
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
 docker container create -i -t --name mycontainer alpine
 6d8af538ec541dd581ebc2a24153a28329acb5268abe5ef868c1f1a261221752
 
