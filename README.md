@@ -9,7 +9,7 @@ sudo chmod 666 /var/run/docker.sock
 sudo service docker start && docker-compose up -d
 
 DOTNET_FILE=dotnet-sdk-7.0.403-linux-musl-arm64.tar.gz
-export DOTNET_ROOT=$(pwd)/.dotnet
+export DOTNET_ROOT=$(pwd)/dotnet
 
 mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
 
